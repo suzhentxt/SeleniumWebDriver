@@ -10,7 +10,7 @@ def open_chrome(name_profile=None):
     chrome_options.add_argument("--disable-infobars")
 
     if name_profile != None:
-        chrome_options.add_argument("user-data-dir=C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data")
+        chrome_options.add_argument("user-data-dir=C:/Users/Admin/AppData/Local/Google/Chrome/User Data")
         chrome_options.add_argument(f"--profile-directory={name_profile}")
 
     chrome_options.add_experimental_option("detach", True)
