@@ -1,0 +1,1 @@
+mở với profile 1 thì nó k hiện trang cần mở nhưng nếu để mặc định thì mở được bình thường
