@@ -13,7 +13,7 @@ class RegTikTokController():
 
     def open_chrome(self, name_profile=None):
 
-        #Mở profile sẵn có
+        # Mở profile sẵn có
         chrome_options = Options()
 
         chrome_options.add_argument("--disable-notifications")
@@ -33,6 +33,7 @@ class RegTikTokController():
 
     def reg_tiktok(self):
         
+        # Nhập ngày tháng năm sinh
         WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_element_located((By.XPATH, "//div[@aria-label='Month. Double-tap for more options']"))).click()
         month = random.choice(range(12))
         WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_element_located((By.ID, f"Month-options-item-{month}"))).click()

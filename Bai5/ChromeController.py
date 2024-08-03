@@ -5,7 +5,7 @@ import time
 
 def open_chrome(name_profile=None):
 
-    #Mở profile sẵn có
+    # Mở profile sẵn có
     chrome_options = Options()
 
     chrome_options.add_argument("--disable-notifications")
