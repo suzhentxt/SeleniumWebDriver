@@ -1,4 +1,7 @@
-from ChromeController import open_chrome
+from ChromeController import RegTikTokController
 
-# open_chrome(name_profile="Profile 1")
-open_chrome()
+auto = RegTikTokController()
+
+auto.open_chrome()
+
+auto.reg_tiktok()

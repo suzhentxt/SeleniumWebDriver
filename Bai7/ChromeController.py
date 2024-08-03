@@ -46,3 +46,7 @@ class RegTikTokController():
         year = random.choice(range(1990,2000))
         id_year = 2022 - year
         WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_element_located((By.ID, f"Year-options-item-{id_year}"))).click()
+
+        # Nhập mail
+        WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_element_located((By.XPATH, "//input[@autocomplete='email']"))).send_keys("trinhcnt@gmail.com")
+        WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_element_located((By.XPATH, "//input[@autocomplete='new-password']"))).send_keys("@trinh12323")
