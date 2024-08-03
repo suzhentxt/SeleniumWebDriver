@@ -54,7 +54,9 @@ class RegTikTokController():
     def watch_video(self, number_video):
         self.driver.get("https://www.tiktok.com/foryou")
         
-        likes = WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_all_elements_located((By.XPATH, "//span@[data-e2e='like-icon']")))
+        likes = WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_all_elements_located((By.XPATH, "//span[@data-e2e='like-icon']")))
 
-        for video in number_video:
-            time.sleep(random.choice(range(10,50)))
+        print("Number: ", len(likes))
+
+        # for video in number_video:
+        #     time.sleep(random.choice(range(10,50)))
