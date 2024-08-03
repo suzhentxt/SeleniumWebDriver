@@ -36,9 +36,11 @@ class RegYoutubeController():
     def watch_video(self, searchtext):
         # WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_element_located((By.XPATH, "//input[@autocomplete='off']"))).click()
     
-        WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_element_located((By.XPATH, "//input[@autocomplete='off']"))).send_keys(searchtext)
+        search_box = WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_element_located((By.XPATH, "//input[@autocomplete='off']")))
+        search_box.send_keys(searchtext)
     
-        WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_element_located((By.ID, "search-icon-legacy"))).click()
+        search_button = WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_element_located((By.ID, "search-icon-legacy")))
+        search_button.click()
 
         first_video = WebDriverWait(driver=self.driver, timeout=20).until(EC.element_to_be_clickable((By.XPATH, "//ytd-video-renderer[1]//a[@id='video-title']")))
         first_video.click()
