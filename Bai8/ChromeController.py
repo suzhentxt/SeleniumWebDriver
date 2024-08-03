@@ -50,3 +50,11 @@ class RegTikTokController():
         # Nhập mail
         WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_element_located((By.XPATH, "//input[@autocomplete='email']"))).send_keys("trinhcnt@gmail.com")
         WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_element_located((By.XPATH, "//input[@autocomplete='new-password']"))).send_keys("@trinh12323")
+
+    def watch_video(self, number_video):
+        self.driver.get("https://www.tiktok.com/foryou")
+        
+        likes = WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_all_elements_located((By.XPATH, "//span@[data-e2e='like-icon']")))
+
+        for video in number_video:
+            time.sleep(random.choice(range(10,50)))
