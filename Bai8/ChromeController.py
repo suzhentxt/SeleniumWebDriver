@@ -59,7 +59,10 @@ class RegTikTokController():
 
         print("Like count: ", len(likes))
 
+        pos = 0
+
         for i in range(number_video):
-            ActionChains(driver=self.driver).move_to_element(likes[i])
-            time.sleep(random.choice(range(2,10)))
+            time.sleep(random.choice(range(2,5)))
             likes[i].click()
+            self.driver.execute_script(f"window.scrollTo({pos}, {pos + 620})")
+            pos = pos + 620
