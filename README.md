@@ -1,4 +1,4 @@
-\textbf{Selenium is a popular open source framework for automated testing of web applications across multiple browsers, operating systems, and devices.}
+#Selenium is a popular open source framework for automated testing of web applications across multiple browsers, operating systems, and devices.
 
 - Tạo môi trường ảo, cài đặt các thư viện cần thiết trên môi trường ảo đó
 - Mở chrome theo 2 cách:
