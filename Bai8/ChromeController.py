@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.action_chains import ActionChains
 import time
 import random
 
@@ -56,7 +57,7 @@ class RegTikTokController():
         
         likes = WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_all_elements_located((By.XPATH, "//span[@data-e2e='like-icon']")))
 
-        print("Number: ", len(likes))
+        print("Like count: ", len(likes))
 
-        # for video in number_video:
-        #     time.sleep(random.choice(range(10,50)))
+        for video in range(number_video):
+            time.sleep(random.choice(range(10,30)))
