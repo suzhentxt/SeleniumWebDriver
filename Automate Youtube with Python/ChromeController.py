@@ -34,7 +34,6 @@ class RegYoutubeController():
         self.driver.get(url)
 
     def watch_video(self, searchtext):
-        # WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_element_located((By.XPATH, "//input[@autocomplete='off']"))).click()
     
         search_box = WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_element_located((By.XPATH, "//input[@autocomplete='off']")))
         search_box.send_keys(searchtext)
