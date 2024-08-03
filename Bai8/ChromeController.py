@@ -59,5 +59,7 @@ class RegTikTokController():
 
         print("Like count: ", len(likes))
 
-        for video in range(number_video):
-            time.sleep(random.choice(range(10,30)))
+        for i in range(number_video):
+            ActionChains(driver=self.driver).move_to_element(likes[i])
+            time.sleep(random.choice(range(2,10)))
+            likes[i].click()
