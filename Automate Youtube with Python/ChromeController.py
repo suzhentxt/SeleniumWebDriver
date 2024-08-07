@@ -25,8 +25,6 @@ class RegYoutubeController():
             chrome_options.add_argument("user-data-dir=C:/Users/Admin/AppData/Local/Google/Chrome/User Data")
             chrome_options.add_argument(f"--profile-directory={name_profile}")
 
-        # chrome_options.add_experimental_option("detach", True)
-        
         chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:4444")
         self.driver = webdriver.Chrome(options=chrome_options)
 
