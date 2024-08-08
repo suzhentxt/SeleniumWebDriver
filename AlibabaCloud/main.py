@@ -1,3 +1,5 @@
-from ChromeController import open_chrome
+from ChromeController import RegWebController
 
-open_chrome()
+auto = RegWebController()
+
+auto.open_chrome()

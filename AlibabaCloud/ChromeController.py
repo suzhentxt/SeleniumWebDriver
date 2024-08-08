@@ -8,7 +8,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 import random
 
-class RegYoutubeController():
+class RegWebController():
 
     def __init__(self) -> None:
         pass    
