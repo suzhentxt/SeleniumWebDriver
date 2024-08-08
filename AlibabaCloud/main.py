@@ -3,8 +3,9 @@ from ChromeController import RegWebController
 auto = RegWebController()
 
 auto.open_chrome()
-
-auto.reg_web()
+auto.signup()
+auto.step1()
+auto.step2()
 
 # cmd:
 #     cd C:\Program Files\Google\Chrome\Application
