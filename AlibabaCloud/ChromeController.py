@@ -25,7 +25,7 @@ class RegWebController():
 
         # chrome_options.add_experimental_option("detach", True)
         
-        # chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:4444")
+        chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:4444")
         self.driver = webdriver.Chrome(options=chrome_options)
 
         url = "https://account.alibabacloud.com/register/intl_register.htm?spm=a2c45.11132017.9219519220.2.278c79f4lf0P7d"
@@ -33,6 +33,10 @@ class RegWebController():
 
     def reg_web(self):
         
-        # Chọn next
-        WebDriverWait(driver=self.driver, timeout=30).until(EC.visibility_of_element_located((By.CLASS_NAME, "entity__btn-next"))).click()
-        
+        # Nhấn next
+        try:    
+            next_button = WebDriverWait(driver=self.driver, timeout=30).until(EC.element_to_be_clickable((By.CLASS_NAME, "entity__btn-next")))
+            next_button.click()
+            print("Clicked on the 'Next' button successfully.")
+        except Exception as e:
+            print(f"Failed to click on the 'Next' button: {e}")
