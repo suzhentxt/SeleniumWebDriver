@@ -33,20 +33,6 @@ class RegWebController():
 
     def reg_web(self):
         
-        # Nhập ngày tháng năm sinh
-        WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_element_located((By.XPATH, "//div[@aria-label='Month. Double-tap for more options']"))).click()
-        month = random.choice(range(12))
-        WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_element_located((By.ID, f"Month-options-item-{month}"))).click()
-
-        WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_element_located((By.XPATH, "//div[@aria-label='Day. Double-tap for more options']"))).click()
-        day = random.choice(range(28))
-        WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_element_located((By.ID, f"Day-options-item-{day}"))).click()
-
-        WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_element_located((By.XPATH, "//div[@aria-label='Year. Double-tap for more options']"))).click()
-        year = random.choice(range(1990,2000))
-        id_year = 2022 - year
-        WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_element_located((By.ID, f"Year-options-item-{id_year}"))).click()
-
-        # Nhập mail
-        WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_element_located((By.XPATH, "//input[@autocomplete='email']"))).send_keys("trinhcnt@gmail.com")
-        WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_element_located((By.XPATH, "//input[@autocomplete='new-password']"))).send_keys("@trinh12323")
+        # Chọn next
+        WebDriverWait(driver=self.driver, timeout=30).until(EC.visibility_of_element_located((By.CLASS_NAME, "entity__btn-next"))).click()
+        
