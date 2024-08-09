@@ -6,7 +6,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 import time
 
 def open_chrome(name_profile=None):
-
     # Mở profile sẵn có
     chrome_options = Options()
 
