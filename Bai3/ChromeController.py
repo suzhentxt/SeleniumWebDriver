@@ -2,7 +2,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 def open_chrome(name_profile=None):
-
     # Mở profile sẵn có
     chrome_options = Options()
 
