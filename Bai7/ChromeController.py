@@ -12,7 +12,6 @@ class RegTikTokController():
         pass    
 
     def open_chrome(self, name_profile=None):
-
         # Mở profile sẵn có
         chrome_options = Options()
 
@@ -32,7 +31,6 @@ class RegTikTokController():
         self.driver.get(url)
 
     def reg_tiktok(self):
-        
         # Nhập ngày tháng năm sinh
         WebDriverWait(driver=self.driver, timeout=20).until(EC.presence_of_element_located((By.XPATH, "//div[@aria-label='Month. Double-tap for more options']"))).click()
         month = random.choice(range(12))
