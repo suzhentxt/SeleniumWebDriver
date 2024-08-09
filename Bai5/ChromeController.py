@@ -4,7 +4,6 @@ from selenium.webdriver.common.by import By
 import time
 
 def open_chrome(name_profile=None):
-
     # Mở profile sẵn có
     chrome_options = Options()
 
