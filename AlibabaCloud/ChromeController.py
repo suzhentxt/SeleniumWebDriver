@@ -65,7 +65,7 @@ class RegWebController():
         phone_input = WebDriverWait(driver=self.driver, timeout=30).until(EC.presence_of_element_located((By.ID, "mobile")))
         send_code_button = WebDriverWait(driver=self.driver, timeout=30).until(EC.presence_of_element_located((By.XPATH, "//span[contains(text(), 'Send Message')]")))
 
-        phone_input.send_keys("911185774")  
+        phone_input.send_keys("") #Nhập số điện thoại  
         send_code_button.click()
 
         # Chờ 60 giây, gửi lại mã và nhập OTP
