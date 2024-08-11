@@ -67,5 +67,3 @@ class RegWebController():
 
         phone_input.send_keys("") #Nhập số điện thoại  
         send_code_button.click()
-
-        # Chờ 60 giây, gửi lại mã và nhập OTP
