@@ -76,5 +76,3 @@ class RegWebController():
 
         # Đăng nhập vào tài khoản
         # self.driver.switch_to.default_content()  # Quay lại nội dung chính
-        # login_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Login')]")))
-        # login_button.click()
