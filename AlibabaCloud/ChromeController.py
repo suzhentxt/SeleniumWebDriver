@@ -71,6 +71,3 @@ class RegWebController():
         # Chờ 60 giây, gửi lại mã và nhập OTP
         # time.sleep(60)  # Chờ 60 giây
         # send_code_button.click()  # Gửi lại mã
-        # otp_input = self.driver.find_element(By.NAME, "otp")
-        # otp_input.send_keys("123456")  
-
