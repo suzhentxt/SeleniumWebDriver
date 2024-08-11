@@ -69,4 +69,3 @@ class RegWebController():
         send_code_button.click()
 
         # Chờ 60 giây, gửi lại mã và nhập OTP
-        # time.sleep(60)  # Chờ 60 giây
