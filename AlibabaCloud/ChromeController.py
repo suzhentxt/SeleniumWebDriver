@@ -74,5 +74,3 @@ class RegWebController():
         # otp_input = self.driver.find_element(By.NAME, "otp")
         # otp_input.send_keys("123456")  
 
-        # Đăng nhập vào tài khoản
-        # self.driver.switch_to.default_content()  # Quay lại nội dung chính
