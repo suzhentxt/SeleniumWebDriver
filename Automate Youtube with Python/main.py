@@ -1,4 +1,4 @@
-from ChromeController import RegYoutubeController
+from ChromeController import YoutubeController
 
 search_text = input("Enter the search keyword: ")
 
