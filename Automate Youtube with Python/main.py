@@ -2,7 +2,7 @@ from ChromeController import RegYoutubeController
 
 search_text = input("Enter the search keyword: ")
 
-auto = RegYoutubeController()
+auto = YoutubeController()
 
 auto.open_chrome()
 
